@@ -1,0 +1,182 @@
+[
+  {
+    "instruction": "Explain this medical term in simple language that anyone can understand:",
+    "input": "Basal Body Temperature",
+    "output": "Basal body temperature is your temperature at rest when you wake up in the morning. this temperature rises slightly around the time of ovulation. keeping track of this temperature and other changes such as cervical mucus may help you figure out when you are ovulating. take your temperature before you get out of bed every morning. since the change during ovulation is only about 1/2 degree f (1/3 degree c), you should use a sensitive thermometer such as a basal body thermometer."
+  },
+  {
+    "instruction": "Simplify this medical information for a patient:",
+    "input": "Medical term: Basal Body Temperature. Definition: Basal body temperature is your temperature at rest when you wake up in the morning. This temperature rises slightly around the time of ovulation. Keeping track of this temperature and other changes such as cervical mucus may help you figure out when you are ovulating. Take your temperature before you get out of bed every morning. Since the change during ovulation is only about 1/2 degree F (1/3 degree C), you should use a sensitive thermometer such as a basal body thermometer.",
+    "output": "Basal Body Temperature is a condition where basal body temperature is your temperature at rest when you wake up in the morning. this temperature rises slightly around the time of ovulation. keeping track of this temperature and other changes such as cervical mucus may help you figure out when you are ovulating. take your temperature before you get out of bed every morning. since the change during ovulation is only about 1/2 degree f (1/3 degree c), you should use a sensitive thermometer such as a basal body thermometer."
+  },
+  {
+    "instruction": "Explain this medical term in simple language that anyone can understand:",
+    "input": "Blood Alcohol Content",
+    "output": "Blood alcohol content, or blood alcohol concentration (bac), is the amount of alcohol in a given volume of blood. for medical and legal purposes, bac is expressed as grams of alcohol in a 100 milliliter sample of blood."
+  },
+  {
+    "instruction": "Simplify this medical information for a patient:",
+    "input": "Medical term: Blood Alcohol Content. Definition: Blood alcohol content, or blood alcohol concentration (BAC), is the amount of alcohol in a given volume of blood.  For medical and legal purposes, BAC is expressed as grams of alcohol in a 100 milliliter sample of blood.",
+    "output": "Blood Alcohol Content is a condition where blood alcohol content, or blood alcohol concentration (bac), is the amount of alcohol in a given volume of blood. for medical and legal purposes, bac is expressed as grams of alcohol in a 100 milliliter sample of blood."
+  },
+  {
+    "instruction": "Explain this medical term in simple language that anyone can understand:",
+    "input": "Blood  Pressure",
+    "output": "Blood pressure is the force of blood pushing against the walls of the arteries as your heart pumps blood. it includes two measurements. \"systolic\" is your blood pressure when your heart beats while pumping blood. \"diastolic\" is your blood pressure when the heart is at rest between beats. you usually see blood pressure numbers written with the systolic number above or before the diastolic number. for example, you might see 120/80."
+  },
+  {
+    "instruction": "Simplify this medical information for a patient:",
+    "input": "Medical term: Blood  Pressure. Definition: Blood pressure is the force of blood pushing against the walls of the arteries as your heart pumps blood.  It includes two measurements. \"Systolic\" is your blood pressure when your heart beats while pumping blood. \"Diastolic\" is your blood pressure when the heart is at rest between beats. You usually see blood pressure numbers written with the systolic number above or before the diastolic number. For example, you might see 120/80.",
+    "output": "Blood  Pressure is a condition where blood pressure is the force of blood pushing against the walls of the arteries as your heart pumps blood. it includes two measurements. \"systolic\" is your blood pressure when your heart beats while pumping blood. \"diastolic\" is your blood pressure when the heart is at rest between beats. you usually see blood pressure numbers written with the systolic number above or before the diastolic number. for example, you might see 120/80."
+  },
+  {
+    "instruction": "Explain this medical term in simple language that anyone can understand:",
+    "input": "Blood Type",
+    "output": "There are four major blood types: a, b, o, and ab. the types are based on substances on the surface of the blood cells. besides blood types, there is the rh factor. it is a protein on red blood cells. most people are rh-positive; they have rh factor. rh-negative people don't have it. rh factor is inherited though genes."
+  },
+  {
+    "instruction": "Simplify this medical information for a patient:",
+    "input": "Medical term: Blood Type. Definition: There are four major blood types: A, B, O, and AB. The types are based on substances on the surface of the blood cells.  Besides blood types, there is the Rh factor.  It is a protein on red blood cells. Most people are Rh-positive; they have Rh factor. Rh-negative people don't have it.  Rh factor is inherited though genes.",
+    "output": "Blood Type is a condition where there are four major blood types: a, b, o, and ab. the types are based on substances on the surface of the blood cells. besides blood types, there is the rh factor. it is a protein on red blood cells. most people are rh-positive; they have rh factor. rh-negative people don't have it. rh factor is inherited though genes."
+  },
+  {
+    "instruction": "Explain this medical term in simple language that anyone can understand:",
+    "input": "Body Mass Index",
+    "output": "Body mass index (bmi) is an estimate of your body fat. it is calculated from your height and weight. it can tell you whether you are underweight, normal, overweight, or obese. it can help you gauge your risk for diseases that can occur with more body fat."
+  },
+  {
+    "instruction": "Simplify this medical information for a patient:",
+    "input": "Medical term: Body Mass Index. Definition: Body Mass Index (BMI) is an estimate of your body fat.  It is calculated from your height and weight.  It can tell you whether you are underweight, normal, overweight, or obese. It can help you gauge your risk for diseases that can occur with more body fat.",
+    "output": "Body Mass Index is a condition where body mass index (bmi) is an estimate of your body fat. it is calculated from your height and weight. it can tell you whether you are underweight, normal, overweight, or obese. it can help you gauge your risk for diseases that can occur with more body fat."
+  },
+  {
+    "instruction": "Explain this medical term in simple language that anyone can understand:",
+    "input": "Body Temperature",
+    "output": "Body temperature is a measure of your body’s level of heat."
+  },
+  {
+    "instruction": "Simplify this medical information for a patient:",
+    "input": "Medical term: Body Temperature. Definition: Body temperature is a measure of your body’s level of heat.",
+    "output": "Body Temperature is a condition where body temperature is a measure of your body’s level of heat."
+  },
+  {
+    "instruction": "Explain this medical term in simple language that anyone can understand:",
+    "input": "Cervical Mucus",
+    "output": "Cervical mucus comes from the cervix. it collects in the vagina. tracking the changes in your mucus during your cycle, along with changes in your basal body temperature, may help you figure out when you are ovulating."
+  },
+  {
+    "instruction": "Simplify this medical information for a patient:",
+    "input": "Medical term: Cervical Mucus. Definition: Cervical mucus comes from the cervix. It collects in the vagina. Tracking the changes in your mucus during your cycle, along with changes in your basal body temperature, may help you figure out when you are ovulating.",
+    "output": "Cervical Mucus is a condition where cervical mucus comes from the cervix. it collects in the vagina. tracking the changes in your mucus during your cycle, along with changes in your basal body temperature, may help you figure out when you are ovulating."
+  },
+  {
+    "instruction": "Explain this medical term in simple language that anyone can understand:",
+    "input": "Galvanic Skin  Response",
+    "output": "Galvanic skin response is a change in electrical resistance of the skin. it can occur in response to emotional arousal or other conditions."
+  },
+  {
+    "instruction": "Simplify this medical information for a patient:",
+    "input": "Medical term: Galvanic Skin  Response. Definition: Galvanic skin response is a change in electrical resistance of the skin.  It can occur in response to emotional arousal or other conditions.",
+    "output": "Galvanic Skin  Response is a condition where galvanic skin response is a change in electrical resistance of the skin. it can occur in response to emotional arousal or other conditions."
+  },
+  {
+    "instruction": "Explain this medical term in simple language that anyone can understand:",
+    "input": "Heart Rate",
+    "output": "Heart rate, or pulse, is how many times your heart beats in a period of time — usually a minute. the usual pulse for an adult is 60 to 100 beats per minute after resting for at least 10 minutes."
+  },
+  {
+    "instruction": "Simplify this medical information for a patient:",
+    "input": "Medical term: Heart Rate. Definition: Heart rate, or pulse, is how many times your heart beats in a period of time — usually a minute. The usual pulse for an adult is 60 to 100 beats per minute after resting for at least 10 minutes.",
+    "output": "Heart Rate is a condition where heart rate, or pulse, is how many times your heart beats in a period of time — usually a minute. the usual pulse for an adult is 60 to 100 beats per minute after resting for at least 10 minutes."
+  },
+  {
+    "instruction": "Explain this medical term in simple language that anyone can understand:",
+    "input": "Height",
+    "output": "Your height is the distance from the bottom of your feet to the top of your head when you are standing up straight."
+  },
+  {
+    "instruction": "Simplify this medical information for a patient:",
+    "input": "Medical term: Height. Definition: Your height is the distance from the bottom of your feet to the top of your head when you are standing up straight.",
+    "output": "Height is a condition where your height is the distance from the bottom of your feet to the top of your head when you are standing up straight."
+  },
+  {
+    "instruction": "Explain this medical term in simple language that anyone can understand:",
+    "input": "Inhaler Usage",
+    "output": "An inhaler is a device that sprays medicine through your mouth to your lungs."
+  },
+  {
+    "instruction": "Simplify this medical information for a patient:",
+    "input": "Medical term: Inhaler Usage. Definition: An inhaler is a device that sprays medicine through your mouth to your lungs.",
+    "output": "Inhaler Usage is a condition where an inhaler is a device that sprays medicine through your mouth to your lungs."
+  },
+  {
+    "instruction": "Explain this medical term in simple language that anyone can understand:",
+    "input": "Menstruation",
+    "output": "Menstruation, or period, is normal vaginal bleeding that happens as part of a woman's monthly cycle. keeping track of your cycles helps you figure out when the next one will come, whether you missed one, and if there is a problem with your cycles."
+  },
+  {
+    "instruction": "Simplify this medical information for a patient:",
+    "input": "Medical term: Menstruation. Definition: Menstruation, or period, is normal vaginal bleeding that happens as part of a woman's monthly cycle. Keeping track of your cycles helps you figure out when the next one will come, whether you missed one, and if there is a problem with your cycles.",
+    "output": "Menstruation is a condition where menstruation, or period, is normal vaginal bleeding that happens as part of a woman's monthly cycle. keeping track of your cycles helps you figure out when the next one will come, whether you missed one, and if there is a problem with your cycles."
+  },
+  {
+    "instruction": "Explain this medical term in simple language that anyone can understand:",
+    "input": "Ovulation Test",
+    "output": "Ovulation is the release of an egg from a woman's ovary. ovulation tests detect a rise in a hormone level that happens just before ovulation. this can help you figure out when you will ovulate, and when you are most likely to get pregnant."
+  },
+  {
+    "instruction": "Simplify this medical information for a patient:",
+    "input": "Medical term: Ovulation Test. Definition: Ovulation is the release of an egg from a woman's ovary. Ovulation tests detect a rise in a hormone level that happens just before ovulation. This can help you figure out when you will ovulate, and when you are most likely to get pregnant.",
+    "output": "Ovulation Test is a condition where ovulation is the release of an egg from a woman's ovary. ovulation tests detect a rise in a hormone level that happens just before ovulation. this can help you figure out when you will ovulate, and when you are most likely to get pregnant."
+  },
+  {
+    "instruction": "Explain this medical term in simple language that anyone can understand:",
+    "input": "Respiratory Rate",
+    "output": "Breathing rate is your rate of breathing (inhalation and exhalation) within a certain time. it is usually stated as breaths per minute."
+  },
+  {
+    "instruction": "Simplify this medical information for a patient:",
+    "input": "Medical term: Respiratory Rate. Definition: Respiratory rate is your rate of breathing (inhalation and exhalation) within a certain time. It is usually stated as breaths per minute.",
+    "output": "Respiratory Rate is a condition where breathing rate is your rate of breathing (inhalation and exhalation) within a certain time. it is usually stated as breaths per minute."
+  },
+  {
+    "instruction": "Explain this medical term in simple language that anyone can understand:",
+    "input": "Sexual Activity",
+    "output": "Sexuality is part of being human and plays a role in healthy relationships. keeping track of your sexual activity can help you watch for sexual problems and fertility problems. it can also help you learn about your risk for sexually transmitted diseases."
+  },
+  {
+    "instruction": "Simplify this medical information for a patient:",
+    "input": "Medical term: Sexual Activity. Definition: Sexuality is part of being human and plays a role in healthy relationships. Keeping track of your sexual activity can help you watch for sexual problems and fertility problems. It can also help you learn about your risk for sexually transmitted diseases.",
+    "output": "Sexual Activity is a condition where sexuality is part of being human and plays a role in healthy relationships. keeping track of your sexual activity can help you watch for sexual problems and fertility problems. it can also help you learn about your risk for sexually transmitted diseases."
+  },
+  {
+    "instruction": "Explain this medical term in simple language that anyone can understand:",
+    "input": "Spotting",
+    "output": "Spotting is light vaginal bleeding that is not your period. it could be between periods, after menopause, or during pregnancy. there can be many different causes; some are serious and some are not. contact your health care provider if you have spotting; call right away if you are pregnant."
+  },
+  {
+    "instruction": "Simplify this medical information for a patient:",
+    "input": "Medical term: Spotting. Definition: Spotting is light vaginal bleeding that is not your period. It could be between periods, after menopause, or during pregnancy. There can be many different causes; some are serious and some are not. Contact your health care provider if you have spotting; call right away if you are pregnant.",
+    "output": "Spotting is a condition where spotting is light vaginal bleeding that is not your period. it could be between periods, after menopause, or during pregnancy. there can be many different causes; some are serious and some are not. contact your health care provider if you have spotting; call right away if you are pregnant."
+  },
+  {
+    "instruction": "Explain this medical term in simple language that anyone can understand:",
+    "input": "UV Exposure",
+    "output": "Ultraviolet (uv) rays are an invisible form of radiation from sunlight. they can help your body form vitamin d naturally. but they can pass through your skin and damage your skin cells, causing sunburn. uv rays can also cause eye problems, wrinkles, skin spots, and skin cancer."
+  },
+  {
+    "instruction": "Simplify this medical information for a patient:",
+    "input": "Medical term: UV Exposure. Definition: Ultraviolet (UV) rays are an invisible form of radiation from sunlight. They can help your body form vitamin D naturally. But they can pass through your skin and damage your skin cells, causing sunburn. UV rays can also cause eye problems, wrinkles, skin spots, and skin cancer.",
+    "output": "UV Exposure is a condition where ultraviolet (uv) rays are an invisible form of radiation from sunlight. they can help your body form vitamin d naturally. but they can pass through your skin and damage your skin cells, causing sunburn. uv rays can also cause eye problems, wrinkles, skin spots, and skin cancer."
+  },
+  {
+    "instruction": "Explain this medical term in simple language that anyone can understand:",
+    "input": "Weight (Body Mass)",
+    "output": "Your weight is the mass or quantity of your heaviness. it is expressed by units of pounds or kilograms."
+  },
+  {
+    "instruction": "Simplify this medical information for a patient:",
+    "input": "Medical term: Weight (Body Mass). Definition: Your weight is the mass or quantity of your heaviness.  It is expressed by units of pounds or kilograms.",
+    "output": "Weight (Body Mass) is a condition where your weight is the mass or quantity of your heaviness. it is expressed by units of pounds or kilograms."
+  }
+]
