@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Condition Explainer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(45deg, #2c5aa0, #4a90e2);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .main-content {
+            padding: 40px;
+        }
+
+        .input-section {
+            margin-bottom: 30px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #4a90e2;
+            box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+        }
+
+        .difficulty-selector {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .difficulty-btn {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .difficulty-btn:hover {
+            border-color: #4a90e2;
+            background: #f8f9ff;
+        }
+
+        .difficulty-btn.active {
+            border-color: #4a90e2;
+            background: #4a90e2;
+            color: white;
+        }
+
+        .explain-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(45deg, #2c5aa0, #4a90e2);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .explain-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(74, 144, 226, 0.3);
+        }
+
+        .explain-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .results {
+            margin-top: 30px;
+            padding: 30px;
+            background: #f8f9ff;
+            border-radius: 15px;
+            border-left: 5px solid #4a90e2;
+            display: none;
+        }
+
+        .results.show {
+            display: block;
+            animation: slideIn 0.5s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .result-section {
+            margin-bottom: 25px;
+        }
+
+        .result-section h3 {
+            color: #2c5aa0;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .result-section p {
+            line-height: 1.6;
+            color: #444;
+            font-size: 16px;
+        }
+
+        .icon {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+
+        .error {
+            background: #fee;
+            border-left-color: #e74c3c;
+            color: #c0392b;
+        }
+
+        .examples {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f0f8ff;
+            border-radius: 10px;
+        }
+
+        .examples h3 {
+            color: #2c5aa0;
+            margin-bottom: 15px;
+        }
+
+        .example-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .example-tag {
+            background: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .example-tag:hover {
+            background: #4a90e2;
+            color: white;
+            border-color: #4a90e2;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 10px;
+                border-radius: 15px;
+            }
+            
+            .header, .main-content {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .difficulty-selector {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏥 Medical Condition Explainer</h1>
+            <p>Understanding medical terms made simple and accessible</p>
+        </div>
+        
+        <div class="main-content">
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="medical-text">Enter a medical condition or term:</label>
+                    <input type="text" id="medical-text" placeholder="e.g., myocardial infarction, hypertension, diabetes..." />
+                </div>
+                
+                <div class="input-group">
+                    <label>Explanation Level:</label>
+                    <div class="difficulty-selector">
+                        <button class="difficulty-btn active" data-level="simple">
+                            👶 Simple (Age 5+)
+                        </button>
+                        <button class="difficulty-btn" data-level="detailed">
+                            🎓 Detailed (Age 15+)
+                        </button>
+                    </div>
+                </div>
+                
+                <button class="explain-btn" id="explain-btn">
+                    Explain This Condition
+                </button>
+            </div>
+
+            <div class="examples">
+                <h3>Try these examples:</h3>
+                <div class="example-tags">
+                    <span class="example-tag">Heart Attack</span>
+                    <span class="example-tag">High Blood Pressure</span>
+                    <span class="example-tag">Diabetes</span>
+                    <span class="example-tag">Pneumonia</span>
+                    <span class="example-tag">Osteoporosis</span>
+                    <span class="example-tag">Acid Reflux</span>
+                </div>
+            </div>
+            
+            <div class="results" id="results">
+                <div class="result-section">
+                    <h3>
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                        Simple Explanation
+                    </h3>
+                    <p id="simple-explanation"></p>
+                </div>
+                
+                <div class="result-section">
+                    <h3>
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        Common Symptoms
+                    </h3>
+                    <p id="symptoms"></p>
+                </div>
+                
+                <div class="result-section">
+                    <h3>
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                        </svg>
+                        What Causes It
+                    </h3>
+                    <p id="causes"></p>
+                </div>
+                
+                <div class="result-section">
+                    <h3>
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        Prevention Tips
+                    </h3>
+                    <p id="prevention"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let selectedDifficulty = 'simple';
+        
+        // Handle difficulty selection
+        document.querySelectorAll('.difficulty-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.difficulty-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                selectedDifficulty = btn.dataset.level;
+            });
+        });
+        
+        // Handle example tags
+        document.querySelectorAll('.example-tag').forEach(tag => {
+            tag.addEventListener('click', () => {
+                document.getElementById('medical-text').value = tag.textContent;
+            });
+        });
+        
+        // Handle form submission
+        document.getElementById('explain-btn').addEventListener('click', async () => {
+            const medicalText = document.getElementById('medical-text').value.trim();
+            
+            if (!medicalText) {
+                alert('Please enter a medical condition to explain.');
+                return;
+            }
+            
+            const explainBtn = document.getElementById('explain-btn');
+            const results = document.getElementById('results');
+            
+            // Show loading state
+            explainBtn.disabled = true;
+            explainBtn.textContent = 'Analyzing...';
+            results.classList.remove('show');
+            
+            try {
+                // Simulate API call for demo
+                await new Promise(resolve => setTimeout(resolve, 1500));
+                
+                // In a real Flask app, this would be:
+                // const response = await fetch('/explain', {
+                //     method: 'POST',
+                //     headers: { 'Content-Type': 'application/json' },
+                //     body: JSON.stringify({ text: medicalText, difficulty: selectedDifficulty })
+                // });
+                // const data = await response.json();
+                
+                // Demo data for frontend-only version
+                const demoData = getDemoExplanation(medicalText);
+                
+                // Populate results
+                document.getElementById('simple-explanation').textContent = demoData.explanation.simple;
+                document.getElementById('symptoms').textContent = demoData.explanation.symptoms;
+                document.getElementById('causes').textContent = demoData.explanation.causes;
+                document.getElementById('prevention').textContent = demoData.explanation.prevention;
+                
+                // Show results
+                results.classList.remove('error');
+                results.classList.add('show');
+                
+            } catch (error) {
+                console.error('Error:', error);
+                results.classList.add('error');
+                document.getElementById('simple-explanation').textContent = 'Sorry, there was an error processing your request. Please try again.';
+                results.classList.add('show');
+            } finally {
+                explainBtn.disabled = false;
+                explainBtn.textContent = 'Explain This Condition';
+            }
+        });
+        
+        // Demo explanation function (replace with actual API call)
+        function getDemoExplanation(text) {
+            const medicalTerms = {
+                "heart attack": {
+                    simple: "Heart attack - when blood flow to part of your heart muscle gets blocked, usually by a blood clot.",
+                    symptoms: "Chest pain, shortness of breath, nausea, sweating",
+                    causes: "Blocked coronary arteries, usually from plaque buildup",
+                    prevention: "Regular exercise, healthy diet, don't smoke, manage stress"
+                },
+                "high blood pressure": {
+                    simple: "High blood pressure - when the force of blood against your artery walls is too high.",
+                    symptoms: "Often no symptoms (silent killer), but can cause headaches, dizziness",
+                    causes: "Poor diet, lack of exercise, stress, genetics, age",
+                    prevention: "Low-salt diet, regular exercise, maintain healthy weight, limit alcohol"
+                },
+                "diabetes": {
+                    simple: "Diabetes - when your body can't properly control blood sugar levels.",
+                    symptoms: "Increased thirst, frequent urination, fatigue, blurred vision",
+                    causes: "Body doesn't make enough insulin or can't use insulin properly",
+                    prevention: "Healthy diet, regular exercise, maintain healthy weight"
+                }
+            };
+            
+            const textLower = text.toLowerCase();
+            for (const [term, info] of Object.entries(medicalTerms)) {
+                if (textLower.includes(term)) {
+                    return { explanation: info };
+                }
+            }
+            
+            return {
+                explanation: {
+                    simple: "I don't have information about this specific condition yet. Please consult with a healthcare professional for accurate medical information.",
+                    symptoms: "Unknown - please consult a doctor",
+                    causes: "Unknown - please consult a doctor",
+                    prevention: "General advice: maintain a healthy lifestyle with good diet and exercise"
+                }
+            };
+        }
+        
+        // Handle Enter key in input field
+        document.getElementById('medical-text').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                document.getElementById('explain-btn').click();
+            }
+        });
+    </script>
+</body>
+</html>
